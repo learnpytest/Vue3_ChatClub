@@ -1,7 +1,6 @@
 <template>
-  <div id="Chat-Club">
-    <!-- spinner -->
-    <main role="main"><router-view /></main>
+  <div id="Chat-Club" class="container bg-login bg-signup">
+    <main role="main" class="main"><router-view /></main>
   </div>
 </template>
 
@@ -11,4 +10,6 @@ export default {
 };
 </script>
 
-
+<style lang="scss">
+@import "@/scss/main.scss";
+</style>

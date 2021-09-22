@@ -1,0 +1,40 @@
+// global colors
+@import "@/scss/abstracts/_colors.scss";
+
+// reset css
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+// basic layout
+html,
+body {
+  height: 100%;
+  background-color: var(--bg_color);
+  display: flex;
+  justify-content: center;
+}
+
+.bg-login,
+.bg-signup {
+  background: url("https://images.pexels.com/photos/2672979/pexels-photo-2672979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100vw;
+  height: 100%;
+}
