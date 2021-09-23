@@ -30,7 +30,7 @@
 
       <div class="btn-group">
         <button class="btn" type="submit">signin</button>
-        <button class="btn">Cancel</button>
+        <button class="btn" @click.stop.prevent="cancel">Cancel</button>
         <router-link class="btn-link" :to="{ name: 'sign-up' }"
           >Do not have an account? Sign up here.</router-link
         >
@@ -47,7 +47,6 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Toast } from "@/utils/helpers.js";
 
 // some variables
-
 // bind variables with vue
 // get email and password what are input by user
 // install sweet alert, create helper to config toast feature of sweet alert
@@ -86,7 +85,13 @@ export default {
         });
       }
     };
-    return { signinUserEmail, signinUserPassword, signin };
+
+    // clean up input value
+    const cancel = () => {
+      [signinUserEmail.value, signinUserPassword.value] = ["", ""];
+    };
+
+    return { signinUserEmail, signinUserPassword, signin, cancel };
   },
 };
 </script>
