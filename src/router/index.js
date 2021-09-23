@@ -1,7 +1,11 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHashHistory
+} from "vue-router";
 
-const routes = [
-  {
+// todo import Home and set route for home
+
+const routes = [{
     path: "/signin",
     name: "sign-in",
     component: () => import("@/views/Signin.vue"),
