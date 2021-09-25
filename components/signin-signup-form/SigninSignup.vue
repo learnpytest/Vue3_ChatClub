@@ -52,7 +52,7 @@
         </div>
         <div class="btn-group">
           <button class="btn" type="submit">signup</button>
-          <button class="btn">Cancel</button>
+          <button class="btn" @click.stop.prevent="cancel">Cancel</button>
           <router-link :to="{ path: '/sign-in' }" class="btn-link"
             >Go back Sign-in page</router-link
           >
@@ -115,12 +115,22 @@ export default {
       }
     };
 
+    const cancel = () => {
+      [
+        signupUserNickName.value,
+        signupUserEmail.value,
+        signupUserPassword.value,
+        signupUserPasswordCheck.value,
+      ] = ["", "", "", ""];
+    };
+
     return {
       signupUserNickName,
       signupUserEmail,
-      signup,
       signupUserPassword,
       signupUserPasswordCheck,
+      signup,
+      cancel,
     };
   },
 };
