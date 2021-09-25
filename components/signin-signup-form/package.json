@@ -1,0 +1,20 @@
+{
+  "name": "@bit/rachelchen.a-ui.signin-signup-form",
+  "version": "0.0.2",
+  "homepage": "https://bit.dev/rachelchen/a-ui/signin-signup-form",
+  "main": "dist/SigninSignup.js",
+  "componentId": {
+    "scope": "rachelchen.a-ui",
+    "name": "signin-signup-form",
+    "version": "0.0.2"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {},
+  "license": "SEE LICENSE IN LICENSE",
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/bundlers/vue@2.6.18"
+    }
+  }
+}
