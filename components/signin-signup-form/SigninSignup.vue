@@ -53,7 +53,7 @@
         <div class="btn-group">
           <button class="btn" type="submit">signup</button>
           <button class="btn">Cancel</button>
-          <router-link :to="{ path: '/' }" class="btn-link"
+          <router-link :to="{ path: '/sign-in' }" class="btn-link"
             >Go back Sign-in page</router-link
           >
         </div>
@@ -71,7 +71,6 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-// import { getDatabase } from "firebase/database";
 export default {
   setup() {
     const signupUserNickName = ref("");
@@ -80,7 +79,6 @@ export default {
     const signupUserPasswordCheck = ref("");
 
     const auth = getAuth();
-    // const db = getDatabase();
     const router = useRouter();
 
     const signup = async () => {
