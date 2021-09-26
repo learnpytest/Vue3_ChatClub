@@ -46,24 +46,17 @@ import "@/config/db.js";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Toast } from "@/utils/helpers.js";
 
-// some variables
-// bind variables with vue
-// get email and password what are input by user
-// install sweet alert, create helper to config toast feature of sweet alert
-// import Toast from helper
-// bind signin action function with the signin form of vue
-// address signin action function to check email and password with firebase authentication
-// if email and password pass firebase authentication, re-direct to home page
-// if email and password fail firebase authentication, pop up warning by sweet alert
 export default {
   name: "Signin",
   setup() {
+    // some variables, bind variables with vue
     const signinUserEmail = ref("");
     const signinUserPassword = ref("");
 
     const auth = getAuth();
     const router = useRouter();
 
+    // address signin action function to check email and password with firebase authentication. The input value that is entered by user should not be empty
     const signin = async () => {
       try {
         if (!signinUserEmail.value || !signinUserPassword.value) return;
@@ -79,7 +72,6 @@ export default {
         });
         router.push({ name: "home" });
       } catch (err) {
-        // todo handle firebase response message for error
         Toast.fire({
           icon: "warning",
           title: "無法登入，請輸入正確帳號密碼",
