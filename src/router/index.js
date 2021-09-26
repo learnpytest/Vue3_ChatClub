@@ -15,6 +15,12 @@ const routes = [{
     name: "sign-up",
     component: () => import("@/views/Signup.vue"),
   },
+  // test remove after finish signin
+  {
+    path: "/home",
+    name: "home",
+    component: () => import("@/views/Home.vue"),
+  },
 ];
 
 const router = createRouter({

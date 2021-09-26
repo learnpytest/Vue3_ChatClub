@@ -76,7 +76,7 @@ export default {
           icon: "success",
           title: "登入成功",
         });
-        router.push({ name: "name" });
+        router.push({ name: "home" });
       } catch (err) {
         // todo handle firebase response message for error
         Toast.fire({
