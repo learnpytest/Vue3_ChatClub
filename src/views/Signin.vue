@@ -66,6 +66,7 @@ export default {
 
     const signin = async () => {
       try {
+        if (!signinUserEmail.value || !signinUserPassword.value) return;
         const userCredential = await signInWithEmailAndPassword(
           auth,
           signinUserEmail.value,
